@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diet | Baby Mama</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/diet.css" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" 
+	        rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+  </head>
+
+  <body>
+    <div class="site-header container">
+	<div id="login">
+	  LOGIN/ REGISTER
+	</div>
+      <h1 id="main-header">
+	<span id="baby">
+	  <span class="orange">B</span><span class="aqua">A</span><span class="lime">B</span><span class="pink">Y</span>
+	</span>
+	<span id="mama">
+	  <span class="orange">M</span><span class="aqua">A</span><span class="lime">M</span><span class="pink">A</span>
+	</span>
+      </h1>
+
+      <div class="row main-nav">
+	<nav>
+	  <ul>
+	    <li class="nav-item"><a href="http://babymama.com/">Home</a></li>
+            <li class="nav-item">
+	      <a href="http://babymama.com/about/">About Us</a>
+	    </li>
+            <li class="nav-item">
+	      <a href="http://babymama.com/food-for-thought/">
+		Food For Thought
+	      </a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="selected" href="#">Health &amp; Body</a></li>
+            <li class="nav-item">
+	      <a href="http://babymama.com/philanthropy/">Good Works</a>
+	    </li>
+	    <li class="nav-item">
+	      <a href="http://babymama.com/contributors/">Contributors</a>
+	    </li>
+            <li class="nav-item">
+	      <a href="http://babymama.com/collective-2/">Shop</a>
+	    </li>
+	  </ul>
+	</nav>
+      </div>
+    </div><!-- site-header -->
+
+
+    <div class="container">
+      <div id="instructions">
+	<div class="row">
+	  <div class="col-md-12" id="hide">
+	    hide X
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md-6">
+	    <h3>Instructions</h3>
+	  </div>
+	</div>
+     
+	<div class="row" id="instructions-text">
+	  <div class="col-md-3">
+	    <h4 class="lime">Weight</h4>
+	    <p>
+	      Just step on your bathroom scale and record your weight.  For
+	      best results, do this in the morning before eating anything.
+	    </p>
+	    <h4 class="pink">Waist</h4>
+	    <p>
+	      Using a measuring tape, measure around your mid-section where the
+ 	      circumference is the smallest. Exhale, and don't suck in your
+	      gut.  That's cheating!  
+	    </p>
+	  </div>
+	  <div class="col-md-3">
+	    <h4 class="orange">Hips</h4>
+	    <p>
+	      With a measuring tape, measure around the mid-section where the
+	      circumference is largest.  Like before, no cheating!
+	    </p>
+	    <h4 class="aqua">Upper Arm</h4>
+	    <p>
+	      With your elbow slightly bent, measure the circumference of your
+	      forearm at its largest point.  Keep the arm relaxed. It doesn't
+	      matter which arm you measure, but use the same one every time (or
+	      average measurements from both arms).
+	    </p>
+	  </div>
+	  <div class="col-md-3">
+	    <h4 class="lime">Thigh Circumference</h4>
+	    <p>
+	      With a measuring tape, measure the circumference of your thigh
+	      at its largest point.  Keep the muscles relaxed. Like arm 
+	      measurements, either use the same leg each time, or average 
+	      the measurements between both legs.
+	    </p>
+	    <h4 class="pink">Chest Fat</h4>
+	    <p>
+	      Using calipers, take a measurement about a hand's-width below the
+	      right collarbone, and about 2 inches out from the midline of your
+	      chest.  Try to be consistent about the location.
+	    </p>
+	  </div>
+	  <div class="col-md-3">
+	    <h4 class="orange">Belly Fat</h4>
+	    <p>
+	      With your calipers, take a measurement about an inch to the right
+	      of your belly button.
+	    </p>
+	    <h4 class="aqua">Thigh Fat</h4>
+	    <p>
+	      With calipers, take a measurement on the midline of your upper
+	      thigh.  To help be consistent about the location, placing your 
+	      thumb on the top of your hip bone, and reach your pinkie as far
+	      down the midline of your thigh as you can. Measure at that point.
+	    </p>
+	  </div>
+	</div><!-- instructions-text -->
+	<div class="row" id="instructions-general">
+	  <div class="col-md-6">
+	    <h4>General Points</h4>
+	    <ul>
+	      <li>Try to be consistent in your measurements</li>
+	      <li>
+		For best results, take 2 (or more) measurements and average
+		them.
+	      </li>
+	      <li>
+		<p>
+		  You may use any metric you wish. I used pounds for weight,
+		  cm for tape measurements, but feel free to use kg for weight,
+ 		  inches for tape measurements, etc. Just be consistent.  
+		</p>
+		<p>
+		  For caliper measurements, you must use mm, or the body fat 
+		  percentages will not be calculated correctly.
+		</p>
+	      </li>
+	    </ul>
+	  </div>
+	  <div class="col-md-6">
+	    <h4>Materials</h4>
+	    <p>
+	      Feel free to use any materials you choose.  I used:
+	      <ul>
+		<li>
+		  <a href="http://www.amazon.com/gp/product/B001KXZ808?psc=1&redirect=true&ref_=oh_aui_search_detailpage"
+		     class="aqua">This scale</a>,
+		</li>
+		<li>
+		  <a href="http://www.amazon.com/gp/product/B001RO8IOI?psc=1&redirect=true&ref_=oh_aui_search_detailpage" 
+		     class="lime">This measuring tape</a> and
+		</li>
+		<li>
+		  <a href="http://www.amazon.com/gp/product/B000NN9SDO?psc=1&redirect=true&ref_=oh_aui_search_detailpage" 
+		     class="pink">These calipers</a>
+		</li>
+	      </ul>
+	    </p>
+	  </div>
+	</div><!-- instructions-general -->
+	
+      </div><!-- instructions -->
+      
+      <div id="data-entry-container">
+	<div class="row center">
+	  <div class="col-md-12">
+	    <span class="age-sex">
+	      <label for="age">Age:</label>
+	      <input id="age" name="age" type="number" step="1"
+		     size="6"/>
+	    </span>
+	    <span class="age-sex">
+	      <label for="sex">Sex:</label>
+	      <input id="male-radio" type="radio" name="sex" value="M" /> Male
+	      <input id="female-radio" type="radio" name="sex" value="F" /> 
+	      Female
+	    </span>
+	  </div>
+	</div> <!-- .row (age, sex) -->
+	
+	<div class="row">
+	  <div class="col-md-12">
+	    <table id="diet-table">
+	      <tr class="table-header">
+		<th>Day&nbsp;</th>
+		<th class="orange-alpha">Weight</th>
+		<th class="white">Waist</th>
+		<th class="aqua-alpha">Hips</th>
+		<th class="white">Upper<br />Arm</th>
+		<th class="lime-alpha">Thigh<br />Circ.</th>
+		<th class="white">Chest<br />Fat</th>
+		<th class="pink-alpha">Belly<br />Fat</th>
+		<th class="white">Thigh<br />Fat</th>
+	      </tr>
+	      <tr>
+		<td class="day">1</td>
+		<td><input class="weight" type="number" step="0.1" size="10"/>
+		</td>
+		<td><input class="waist" type="number" step="0.1" size="10" />
+		</td>
+		<td><input class="hips" type="number" step="0.1" size="10" />
+		</td>
+		<td><input class="arm" type="number" step="0.1" size="10" />
+		</td>
+		<td><input class="thigh-c" type="number" step="0.1" 
+			   size="10" /></td>
+		<td><input class="chest" type="number" step="0.1" size="10" />
+		</td>
+		<td><input class="belly" type="number" step="0.1" size="10" />
+		</td>
+		<td><input class="thigh-f" type="number" step="0.1" 
+			   size="10" /></td>
+	      </tr>
+	    </table>
+	  </div><!-- col -->
+	</div><!-- row -->
+	<div class="row center">
+	  <div class="col-md-12">
+	    <input id="add-rows" type="button" value="Add Rows" />
+	    <input id="graph-button" type="button" value="Make Charts" />
+	  </div><!-- col -->
+	</div><!-- row -->
+
+      </div><!-- data-entry-container -->
+
+      <div id="row">
+	<div id="col-md-3">
+	  <input id="table-button" type="button" value="Show Table" />
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-md-12">
+	  <div id="graphs"></div>
+	</div>
+      </div>
+    </div><!-- .container -->
+
+    <div class="footer container">
+      <footer>
+	<div class="row">
+	  <div class="col-md-4">
+	    <nav class="footer-nav">
+	      <h4 class="footer-header">CUSTOMER SUPPORT</h4>
+	      <ul>
+		<li>
+		  <a href="http://babymama.com/contact-us/">Contact Us</a>
+		</li>
+		<li><a href="http://babymama.com/faq/">FAQs</a></li>
+		<li>
+		  <a href="http://babymama.com/shipping-information/">
+		    Shipping Information
+		  </a>
+		</li>
+		<li>
+		  <a href="http://babymama.com/returns-and-exchanges/">
+		    Returns &amp; Exchanges
+		  </a>
+		</li>
+		<li>
+		  <a href="http://babymama.com/payment-security/">
+		    Payment Security
+		  </a>
+		</li>
+	      </ul>
+	    </nav>
+	  </div><!-- first col -->
+	  <div class="col-md-4">
+            <nav class="footer-nav">
+              <h4 class="footer-header">ACCOUNT</h4>
+	      <ul>
+		<li>
+		  <a href="http://babymama.com/my-account-2">My Account</a>
+		</li>
+                <li>
+		  <a href="http://babymama.com/order-history/">
+		    Order History
+		  </a>
+		</li>
+                <li>
+		  <a href="http://babymama.com/subscriptions-2/">
+		    Subscriptions
+		  </a>
+		</li>
+              </ul>
+            </nav>
+	  </div><!-- mid col -->
+	  <div class="col-md-4">
+            <nav class="footer-nav">
+              <h4 class="footer-header">ABOUT</h4>
+	      <ul>
+		<li><a href="http://babymama.com/about/">About Us</a></li>
+                <li>
+		  <a href="http://babymama.com/mission-statement/">
+		    Mission Statement
+		  </a>
+		</li>
+                <li>
+		  <a href="http://babymama.com/affiliates/">Affiliates</a>
+		</li>
+                <li>
+		  <a href="http://babymama.com/partner-with-us/">
+		    Partner with Us
+		  </a>
+		</li>
+                <li>
+		  <a href="http://babymama.com/social-responsibility/">
+		    Social Responsibility
+		  </a>
+		</li>
+                <li>
+		  <a href="http://babymama.com/health-and-sustainability/">
+		    Health and Sustainability
+		  </a>
+		</li>
+                <li>
+		  <a href="http://babymama.com/retail-locator/">
+		    Retail Locator
+		  </a>
+		</li>
+              </ul>
+            </nav>
+	  </div><!-- last col -->
+	</div><!-- row (site nav) -->
+	<div class="row">
+	  <div id="media-icons">
+	    <a href="babymama.com"><img src="dietimages/twitter.png" /></a>
+	    <a href="babymama.com"><img src="dietimages/facebook.png" /></a>
+            <a href="babymama.com"><img src="dietimages/pix.png" /></a>
+	  </div>
+	</div><!-- row (social network links) -->
+	<div class="row">
+	  <div class="col-md-12 copy">
+	    &copy; 2015 BabyMama<br />
+	    This page created by Damian Phillips<br />
+	    <a href="http://www.phillips-research.com/resume.html">
+	      Phillips Research &amp; Analytics, Inc.
+	    </a>
+	  </div>
+	</div>
+      </footer>
+    </div><!-- footer -->
+    
+  </body>
+
+  <script src="js/diet.js"></script>
+  <script src="js/graphs.js"></script>
+</html>
