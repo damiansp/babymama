@@ -77,4 +77,12 @@ for (yr in years) {
 
 head(bmData)
 
+negative <- subset(bmData, category == 'n')
+positive <- subset(bmData, category == 'p')
+
+bmData$phrase <- factor(
+  bmData$phrase, levels = c(levels(bmData$phrase), 'NEGATIVES', 'POSITIVES'))
+bmData <- rbind(bmData, c(0, 'NEGATIVES', 'n', colSums(negative[, 4:16])))
+bmData <- rbind(bmData, c(0, 'POSITIVES', 'n', colSums(positive[, 4:16])))
+
 write.csv(bmData, '~/babymama/babymamahist/csv/bmData.csv')
